@@ -1,0 +1,18 @@
+<h3>member-list works!</h3>
+
+<mat-selection-list [multiple]="false">
+  <mat-list-option
+    *ngFor="let member of usersList"
+    [routerLink]="[member.link]"
+    [queryParams]="{ page: 1, viewOnly: true }"
+  >
+    {{ member.role }}
+  </mat-list-option>
+</mat-selection-list>
+
+<router-outlet></router-outlet>
+
+<!-- Router Links can also be used as follows -->
+<!--   (click)="goToSelectedPortal(member)" -->
+<!-- [routerLink] = "member.link" -->
+<!--  [queryParams]="{ page: 1, viewOnly: true }" -->

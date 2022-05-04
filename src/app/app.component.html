@@ -1,0 +1,12 @@
+<div class="navbar">
+  <button mat-raised-button color="primary" routerLink="member-overview">
+    Member Overview
+  </button>
+  <button mat-raised-button color="primary" [routerLink]="['/member-list']">
+    Member List
+  </button>
+  <button mat-raised-button color="primary" routerLink="admin-workspace">
+    Admin Workspace
+  </button>
+</div>
+<router-outlet></router-outlet>
